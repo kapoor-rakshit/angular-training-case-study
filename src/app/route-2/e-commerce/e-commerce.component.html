@@ -1,1 +1,21 @@
-<p>e-commerce works!</p>
+<div class="configDiv">
+    <button mat-stroked-button color="primary" class="floatRight marginLeft1" (click)="changeView('grid')">Grid View</button>
+    <button mat-stroked-button color="primary" class="floatRight marginLeft1" (click)="changeView('list')">List View</button>
+
+    <mat-form-field class="floatRight">
+        <mat-label>Filter by price</mat-label>
+        <mat-select [(value)]="priceFilter" (selectionChange)="applyFilter()">
+          <mat-option>None</mat-option>
+          <mat-option value="lowToHigh">Low to High</mat-option>
+          <mat-option value="highToLow">High to Low</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div class="containerDiv">
+    <div *ngFor="let product of products;" class="productDiv" 
+        [ngClass]="{'width20vw': selectedView == 'grid', 'width40vw': selectedView == 'list'}">
+        <h2>{{product.index}}</h2>
+        <h4>Price: {{product.price}}</h4>
+    </div>
+</div>

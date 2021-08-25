@@ -1,0 +1,35 @@
+.containerDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    width: 100%;
+}
+
+.productDiv {
+    border: 2px solid black;
+    text-align: center;
+    margin: 2% auto;
+}
+
+.width20vw {
+    width: 20vw;
+}
+
+.width40vw {
+    width: 40vw;
+}
+
+.configDiv {
+    margin-top: 1%;
+    padding-right: 2%;
+}
+
+.floatRight {
+    float: right;
+}
+
+.marginLeft1 {
+    margin-left: 1%;
+}
