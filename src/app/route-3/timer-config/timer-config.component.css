@@ -1,7 +1,11 @@
 :host {
-    border: 2px solid red;
+    border: 2px solid black;
     width: 40vw;
     padding: 2%;
     text-align: center;
     margin: 1%;
+}
+
+.marginLeft1 {
+    margin-left: 1%;
 }

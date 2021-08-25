@@ -3,15 +3,27 @@ import { CommonModule } from '@angular/common';
 
 import { Route3RoutingModule } from './route-3-routing.module';
 import { TimerComponent } from './timer/timer.component';
+import { TimerConfigComponent } from './timer-config/timer-config.component';
+import { TimerLogsComponent } from './timer-logs/timer-logs.component';
+import { TimerClicksComponent } from './timer-clicks/timer-clicks.component';
+import { TimerParentComponent } from './timer-parent/timer-parent.component';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
-    TimerComponent
+    TimerComponent,
+    TimerConfigComponent,
+    TimerLogsComponent,
+    TimerClicksComponent,
+    TimerParentComponent
   ],
   imports: [
     CommonModule,
-    Route3RoutingModule
+    Route3RoutingModule,
+    MatButtonModule,
+    MatInputModule
   ]
 })
 export class Route3Module { }

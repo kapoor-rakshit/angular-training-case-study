@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TimerComponent } from './timer/timer.component';
+import { TimerParentComponent } from './timer-parent/timer-parent.component';
 
 const routes: Routes = [
-  {path: "", component: TimerComponent}
+  {path: "", component: TimerParentComponent}
 ];
 
 @NgModule({
