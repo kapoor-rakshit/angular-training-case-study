@@ -1,0 +1,52 @@
+{
+    "students": [
+        {
+            "name": "Rakshit",
+            "class": 10,
+            "section": "H",
+            "sub1": 74,
+            "sub2":85,
+            "sub3":96
+        },
+        {
+            "name": "Anmol",
+            "class": 4,
+            "section": "H",
+            "sub1": 74,
+            "sub2":85,
+            "sub3":96
+        },
+        {
+            "name": "Paras",
+            "class": 1,
+            "section": "C",
+            "sub1": 27,
+            "sub2":89,
+            "sub3":48
+        },
+        {
+            "name": "Sahil",
+            "class": 6,
+            "section": "A",
+            "sub1": 77,
+            "sub2":11,
+            "sub3":5
+        },
+        {
+            "name": "Shrey",
+            "class": 9,
+            "section": "I",
+            "sub1": 4,
+            "sub2":8,
+            "sub3":68
+        },
+        {
+            "name": "Abhay",
+            "class": 10,
+            "section": "H",
+            "sub1": 41,
+            "sub2":56,
+            "sub3":66
+        }
+    ]
+}

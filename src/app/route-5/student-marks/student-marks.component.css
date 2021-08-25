@@ -1,0 +1,15 @@
+table {
+    width: 80vw;
+    margin: auto;
+    margin-top: 3%;
+}
+
+table tr:nth-child(even) {                                       /*CSS Considers 1 based index*/
+    background-color: #f1f1f1;
+}
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+table tr:not(.mat-header-row):hover {
+    background-color: #c0bebe;
+}
