@@ -16,5 +16,5 @@ export class AppComponent {
     "Dynamic DIV Page"
   ];
 
-  activeLink = this.links[0];
+  activeTabIndex: number = -1;
 }

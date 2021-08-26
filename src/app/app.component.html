@@ -1,32 +1,46 @@
-<nav mat-tab-nav-bar mat-align-tabs="center">
+<nav mat-tab-nav-bar mat-stretch-tabs class="mat-elevation-z4" mat-align-tabs="center" color="warn">
   <a mat-tab-link 
     [routerLink]="['']" 
     [routerLinkActive]="['active']" 
     [routerLinkActiveOptions]="{exact:true}"
+    (click)="activeTabIndex = 0"
+    [active]="activeTabIndex == 0"
     >Home</a>
     <a mat-tab-link 
     [routerLink]="['floating-text']" 
     [routerLinkActive]="['active']"
+    (click)="activeTabIndex = 1"
+    [active]="activeTabIndex == 1"
     >Floating Text Page</a>
     <a mat-tab-link 
     [routerLink]="['e-commerce']" 
     [routerLinkActive]="['active']"
+    (click)="activeTabIndex = 2"
+    [active]="activeTabIndex == 2"
     >e-Commerce Page</a>
     <a mat-tab-link 
     [routerLink]="['timer-app']" 
     [routerLinkActive]="['active']"
-    >Timer App Page</a>
+    (click)="activeTabIndex = 3"
+    [active]="activeTabIndex == 3"
+    >Timer App v1 Page</a>
     <a mat-tab-link 
     [routerLink]="['timer-app-v2']" 
     [routerLinkActive]="['active']"
+    (click)="activeTabIndex = 4"
+    [active]="activeTabIndex == 4"
     >Timer App v2 Page</a>
     <a mat-tab-link 
     [routerLink]="['students-marks']" 
     [routerLinkActive]="['active']"
+    (click)="activeTabIndex = 5"
+    [active]="activeTabIndex == 5"
     >Student Marks Page</a>
     <a mat-tab-link 
     [routerLink]="['dynamic-div']" 
     [routerLinkActive]="['active']"
+    (click)="activeTabIndex = 6"
+    [active]="activeTabIndex == 6"
     >Dynamic DIV Page</a>
 </nav>
 

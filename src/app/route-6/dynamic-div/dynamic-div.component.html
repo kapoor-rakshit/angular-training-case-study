@@ -1,1 +1,7 @@
-<p>dynamic-div works!</p>
+<div class="containerDiv">
+    <div class="childDiv" *ngFor="let div of divsArr; let ind = index;">
+        <h1>{{ind + 1}}</h1>
+        <button mat-stroked-button color="primary" (click)="divBtnClick(ind)">Click</button>
+    </div>
+</div>
+<div class="lds-facebook"><div></div><div></div><div></div></div>
