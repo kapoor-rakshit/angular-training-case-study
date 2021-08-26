@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerParentComponent implements OnInit {
 
+  timerValue: any = 0;
+  timerStatus: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  receivedTimerStat(status: any) {
+    this.timerStatus = status;
+  }
+
+  receivedTimerVal(value: any) {
+    this.timerValue = value;
   }
 
 }

@@ -5,3 +5,15 @@
     text-align: center;
     margin: 1%;
 }
+
+.clicksContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.marginLeft5 {
+    margin-left: 5%;
+}

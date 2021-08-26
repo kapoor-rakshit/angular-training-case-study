@@ -1,6 +1,6 @@
 <div class="containerDiv">
-    <app-timer></app-timer>
-    <app-timer-config></app-timer-config>
-    <app-timer-logs></app-timer-logs>
-    <app-timer-clicks></app-timer-clicks>
+    <app-timer [timerCount]="timerValue"></app-timer>
+    <app-timer-config (timerStatus)="receivedTimerStat($event)" (timerVal)="receivedTimerVal($event)"></app-timer-config>
+    <app-timer-logs [timerStatus]="timerStatus" class="logInfo"></app-timer-logs>
+    <app-timer-clicks [timerStatus]="timerStatus"></app-timer-clicks>
 </div>

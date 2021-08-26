@@ -10,6 +10,7 @@ import { TimerParentComponent } from './timer-parent/timer-parent.component';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {MatInputModule} from '@angular/material/input';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     Route3RoutingModule,
     MatButtonModule,
     MatInputModule

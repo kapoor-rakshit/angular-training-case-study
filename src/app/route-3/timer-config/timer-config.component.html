@@ -1,7 +1,7 @@
-<mat-form-field>
+<mat-form-field [ngClass]="{'notAllowedCursor': !resetClicked}">
     <mat-label>Enter timer limit</mat-label>
-    <input matInput placeholder="Eg: 1000" type="number" min="1">
+    <input matInput placeholder="Eg: 1000" type="number" min="1" [(ngModel)]="timerInput" [disabled]="!resetClicked" [ngClass]="{'notAllowedCursor': !resetClicked}"/>
 </mat-form-field>
 <br/>
-<button mat-raised-button color="primary">Start / Pause</button>
-<button mat-raised-button color="warn" class="marginLeft1">Reset</button>
+<button mat-raised-button color="primary" (click)="startPauseTimer()">Start / Pause</button>
+<button mat-raised-button color="warn" (click)="resetTimer()" class="marginLeft1">Reset</button>

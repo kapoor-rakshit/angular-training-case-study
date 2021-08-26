@@ -4,4 +4,6 @@
     padding: 2%;
     text-align: center;
     margin: 1%;
+    max-height: 15vh;
+    overflow: auto;
 }

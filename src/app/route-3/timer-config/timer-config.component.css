@@ -9,3 +9,7 @@
 .marginLeft1 {
     margin-left: 1%;
 }
+
+.notAllowedCursor {
+    cursor: not-allowed;
+}
