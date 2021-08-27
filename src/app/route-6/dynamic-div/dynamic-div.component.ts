@@ -30,6 +30,8 @@ export class DynamicDivComponent implements OnInit, AfterViewInit {
       for(let i=0; i<this.batchDivCount; i+=1) {
         this.divsArr.push(this.divsArr.length + 1);
       }
+      document.body.scrollTop = document.body.scrollHeight - document.body.clientHeight - 20;
+      document.documentElement.scrollTop = document.documentElement.scrollHeight - document.documentElement.clientHeight - 20;
     }
   }
 

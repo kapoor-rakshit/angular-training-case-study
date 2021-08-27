@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FloatingTextComponent implements OnInit {
 
+  imageText: string = "Welcome to Publicis Sapient. Have a great time.";
+
   constructor() { }
 
   ngOnInit(): void {
