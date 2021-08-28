@@ -8,6 +8,9 @@ import { TimerV2ConfigComponent } from './timer-v2-config/timer-v2-config.compon
 import { TimerV2LogsComponent } from './timer-v2-logs/timer-v2-logs.component';
 import { TimerV2Service } from './timer-v2.service';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { TimerV2Service } from './timer-v2.service';
   ],
   imports: [
     CommonModule,
-    Route4RoutingModule
+    Route4RoutingModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [TimerV2Service]
 })

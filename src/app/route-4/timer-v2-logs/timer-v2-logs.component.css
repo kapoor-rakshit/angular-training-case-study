@@ -1,0 +1,12 @@
+:host {
+    border: 2px dashed red;
+    width: 40vw;
+    margin: 1%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+div.logInfo {
+    max-height: 22vh;
+    overflow: auto;
+}

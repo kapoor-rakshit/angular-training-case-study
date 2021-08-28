@@ -1,0 +1,16 @@
+:host {
+    border: 2px dashed blueviolet;
+    width: 40vw;
+    margin: 1%;
+    padding: 2%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.notAllowedCursor {
+    cursor: not-allowed;
+}
+
+.marginLeft1 {
+    margin-left: 1%;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TimerV2Service } from '../timer-v2.service';
 
 @Component({
   selector: 'app-timer-v2',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerV2Component implements OnInit {
 
-  constructor() { }
+  timerVal: number = 0;
+
+  constructor(private timerService: TimerV2Service) { }
 
   ngOnInit(): void {
+    this.timerService.timerValue.subscribe((count: number)=> {
+      this.timerVal = count;
+    },
+    (err: Error)=> {
+      console.log(`ERROR in receving time value ==> ${err.message}`);
+    });
   }
 
 }
