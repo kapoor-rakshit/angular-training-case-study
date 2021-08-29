@@ -16,7 +16,7 @@ export class TimerV2LogsComponent implements OnInit {
     this.timerService.timerStatus.subscribe((status: string)=> {
 
       let logDiv = document.querySelector(".logInfo");
-      (logDiv as HTMLDivElement).scrollTop = logDiv ? logDiv.clientHeight : Infinity;
+      (logDiv as HTMLDivElement).scrollTop = logDiv ? logDiv.scrollHeight : Infinity;
 
       if(status.toLowerCase() == "start") {
         this.logs.push(`Started at ${new Date().toLocaleString()}`);

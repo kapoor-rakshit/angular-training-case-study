@@ -13,3 +13,7 @@
 .notAllowedCursor {
     cursor: not-allowed;
 }
+
+.mat-form-field {
+    max-width: 100%;
+}
