@@ -21,7 +21,7 @@ export class TimerV2ConfigComponent implements OnInit, OnDestroy {
 
   startPauseTimer() {
     if(this.timerActive) {
-      this.timerService.timerStatus.emit("pause");
+      this.timerService.timerStatus.next("pause");
       clearInterval(this.intervalID);
       this.timerActive = false;
     }
@@ -35,14 +35,14 @@ export class TimerV2ConfigComponent implements OnInit, OnDestroy {
           this.resetClicked = false;
         }
 
-        this.timerService.timerStatus.emit("start");
+        this.timerService.timerStatus.next("start");
   
         this.intervalID = setInterval(()=> {
-          this.timerService.timerValue.emit(this.tpTimer);
+          this.timerService.timerValue.next(this.tpTimer);
           this.tpTimer-=1;
   
           if(this.tpTimer == -1) {
-            this.timerService.timerStatus.emit("finish");
+            this.timerService.timerStatus.next("finish");
             this.timerInput = 0;
             clearInterval(this.intervalID);
             this.timerActive = false;
@@ -56,8 +56,8 @@ export class TimerV2ConfigComponent implements OnInit, OnDestroy {
   }
 
   resetTimer() {
-    this.timerService.timerStatus.emit("reset");
-    this.timerService.timerValue.emit(0);
+    this.timerService.timerStatus.next("reset");
+    this.timerService.timerValue.next(0);
     this.timerInput = 0;
     clearInterval(this.intervalID);
     this.timerActive = false;

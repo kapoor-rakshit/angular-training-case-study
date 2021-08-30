@@ -4,5 +4,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    height: 90%;
+    margin-top: 3%;
+    /* height: 90%; */
 }

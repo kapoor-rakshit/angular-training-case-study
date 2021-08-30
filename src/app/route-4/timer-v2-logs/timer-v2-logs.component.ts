@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { TimerV2Service } from '../timer-v2.service';
 
 @Component({
@@ -6,17 +7,15 @@ import { TimerV2Service } from '../timer-v2.service';
   templateUrl: './timer-v2-logs.component.html',
   styleUrls: ['./timer-v2-logs.component.css']
 })
-export class TimerV2LogsComponent implements OnInit {
+export class TimerV2LogsComponent implements OnInit, OnDestroy {
 
   logs: any[] = [];
+  timerStatSub!: Subscription;
 
   constructor(private timerService: TimerV2Service) { }
 
   ngOnInit(): void {
-    this.timerService.timerStatus.subscribe((status: string)=> {
-
-      let logDiv = document.querySelector(".logInfo");
-      (logDiv as HTMLDivElement).scrollTop = logDiv ? logDiv.scrollHeight : Infinity;
+    this.timerStatSub = this.timerService.timerStatus.subscribe((status: string)=> {
 
       if(status.toLowerCase() == "start") {
         this.logs.push(`Started at ${new Date().toLocaleString()}`);
@@ -27,10 +26,17 @@ export class TimerV2LogsComponent implements OnInit {
       else if(status.toLowerCase() == "reset") {
         this.logs.push(`Reset at ${new Date().toLocaleString()}`);
       }
+
+      let logDiv = document.querySelector(".logInfo");
+      (logDiv as HTMLDivElement).scrollTop = logDiv ? logDiv.scrollHeight : Infinity;
     },
     (err: Error)=> {
       console.log(`ERROR in receving time status ==> ${err.message}`);
     });
+  }
+
+  ngOnDestroy() {
+    this.timerStatSub.unsubscribe();
   }
 
 }

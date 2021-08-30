@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { TimerV2Service } from '../timer-v2.service';
 
 @Component({
@@ -6,16 +7,18 @@ import { TimerV2Service } from '../timer-v2.service';
   templateUrl: './timer-v2-clicks.component.html',
   styleUrls: ['./timer-v2-clicks.component.css']
 })
-export class TimerV2ClicksComponent implements OnInit {
+export class TimerV2ClicksComponent implements OnInit, OnDestroy {
 
   startClicks: number = 0;
   pauseClicks: number = 0;
   resetClicks: number = 0;
 
+  timerStatSub!: Subscription;
+
   constructor(private timerService: TimerV2Service) { }
 
   ngOnInit(): void {
-    this.timerService.timerStatus.subscribe((stat: string)=> {
+    this.timerStatSub = this.timerService.timerStatus.subscribe((stat: string)=> {
       if(stat.toLowerCase() == "start") {
         this.startClicks+=1;
       }
@@ -29,6 +32,10 @@ export class TimerV2ClicksComponent implements OnInit {
     (err: Error)=> {
       console.log(`ERROR in receving time status ==> ${err.message}`);
     });
+  }
+
+  ngOnDestroy() {
+    this.timerStatSub.unsubscribe();
   }
 
 }
