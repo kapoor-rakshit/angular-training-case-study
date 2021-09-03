@@ -33,3 +33,9 @@
 .marginLeft1 {
     margin-left: 1%;
 }
+
+.selectedViewBtn {
+    background-color: rgb(99, 99, 218);
+    color: #fff;
+    /* font-weight: bold; */
+}

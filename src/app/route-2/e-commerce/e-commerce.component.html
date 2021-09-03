@@ -1,6 +1,8 @@
 <div class="configDiv">
-    <button mat-stroked-button color="primary" class="floatRight marginLeft1" (click)="changeView('grid')">Grid View</button>
-    <button mat-stroked-button color="primary" class="floatRight marginLeft1" (click)="changeView('list')">List View</button>
+    <button mat-stroked-button color="primary" class="floatRight marginLeft1" [ngClass]="{'selectedViewBtn': selectedView == 'grid'}" 
+        (click)="changeView('grid')">Grid View</button>
+    <button mat-stroked-button color="primary" class="floatRight marginLeft1" [ngClass]="{'selectedViewBtn': selectedView == 'list'}"
+        (click)="changeView('list')">List View</button>
 
     <mat-form-field class="floatRight">
         <mat-label>Filter by price</mat-label>
